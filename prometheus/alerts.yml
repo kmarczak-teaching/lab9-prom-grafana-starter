@@ -1,0 +1,11 @@
+groups:
+  - name: nginx-alerts
+    rules:
+    - alert: WebAppDown
+      expr: nginx_up == 0
+      for: 30s
+      labels:
+        severity: critical
+      annotations:
+        summary: "Web application is unreachable"
+        description: "NGINX exporter cannot scrape NGINX. The application is likely down or unreachable."
