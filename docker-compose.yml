@@ -1,6 +1,6 @@
 services:
   app:
-    image: <GHCR Python app Docker image address>
+    image: ghcr.io/katmarczak/python-app:latest
     expose:
       - "80"
 
